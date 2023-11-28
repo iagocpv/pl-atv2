@@ -1,0 +1,33 @@
+.item-listado { 
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .conteudo {
+    display: flex;
+    gap: 2em;
+    overflow: hidden;
+  }
+  .acoes {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+  
+  .icone {
+    height: 1.2em;
+    width: 1.2em;
+  }
+  
+  .edit {
+    margin: auto auto;
+    color: blue;
+  }
+  .form-cliente label {
+    margin: 0.2em;
+    color:gray
+  }
+
+ 

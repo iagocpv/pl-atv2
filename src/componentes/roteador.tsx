@@ -1,7 +1,7 @@
 import { Component } from "react";
 import BarraNavegacao from "./barraNavegacao";
-import ListaCliente from "./listaClientes";
-import FormularioCadastroCliente from "./formularioCadastroCliente";
+import ListaCliente from "./cliente/listaClientes";
+import FormularioCadastroCliente from "./cliente/formularioCadastroCliente";
 
 type state = {
     tela: string
