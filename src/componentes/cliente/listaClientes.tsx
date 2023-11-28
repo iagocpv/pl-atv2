@@ -1,16 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Component } from "react";
 import Cliente from "./cliente";
+import { clientesSpring } from "./clientesSpring";
 
 type props = {
     tema: string
 }
 
 export default class ListaCliente extends Component<props>{
-    clientes = [
-        {id: 1, nome: 'Iago Cardoso', nomeSocial: 'Iago Cardoso', cpf: '123.456.789-10', email: 'iago@gmail.com'},
-        {id: 2, nome: 'Mariana Izumi', nomeSocial: 'Mariana Izumi', cpf: '123.456.789-11', email: 'mari@gmail.com'}
-    ]
+    clientes = clientesSpring
     render() {
         let tema = this.props.tema
         return (
@@ -22,7 +20,16 @@ export default class ListaCliente extends Component<props>{
                                 id={c.id}
                                 nome={c.nome}
                                 nomeSocial={c.nomeSocial}
-                                email={c.email}/>
+                                email={c.email}
+                                rua={c.endereco.rua}
+                                numero={c.endereco.numero}
+                                bairro={c.endereco.bairro}
+                                cidade={c.endereco.cidade}
+                                estado={c.endereco.estado}
+                                cep={c.endereco.codigoPostal}
+                                info={c.endereco.informacoesAdicionais}
+                                telefones={c.telefones}
+                                />
                         )
                     })}
                     
