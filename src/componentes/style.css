@@ -19,11 +19,13 @@
 .icone {
   height: 1.2em;
   width: 1.2em;
+  cursor: pointer;
 }
 
 .edit {
   margin: auto auto;
   color: blue;
+  cursor: pointer;
 }
 .form-cliente label {
   margin: 0.2em;
@@ -45,4 +47,17 @@
   margin-bottom: 0.2em;
 }
 
+.seletor-secao {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 1em;
+}
+.seletor-secao div {
+  cursor: pointer;
+}
+.list-title {
+  margin: 1em;
+  text-align: center;
+}
  

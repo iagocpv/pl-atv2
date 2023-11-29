@@ -1,5 +1,5 @@
 import { Component, ReactNode } from "react"
-import './style.css'
+import './../style.css'
 import { BsXLg } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
 import EditarCliente from "./editarCliente";
@@ -67,6 +67,14 @@ export default class Cliente extends Component<props, state>{
                             nome={this.props.nome}
                             nomeSocial={this.props.nomeSocial}
                             email={this.props.email}
+                            rua={this.props.rua}
+                            numero={this.props.numero}
+                            bairro={this.props.bairro}
+                            cidade={this.props.cidade}
+                            estado={this.props.estado}
+                            cep={this.props.cep}
+                            info={this.props.info}
+                            telefones={this.props.telefones}
                         ></EditarCliente>
                         <BsXLg className="icone" style={{color: 'red'}} onClick={this.deletar}/>
                         <BsChevronDown onClick={this.toggleShow} className="icone"/>
@@ -86,7 +94,7 @@ export default class Cliente extends Component<props, state>{
                         <div className="detalhes">
                             <h3>Telefones</h3>
                             <div className="detalhes-item">
-                                {this.props.telefones.map(t => { return <div>({t.ddd}) {t.numero}</div> })}                        
+                                {this.props.telefones.map((t, i) => { return <div><b>Telefone {i+1}:  </b>({t.ddd}) {t.numero}</div> })}                        
                             </div>
                         </div>
                         <div className="detalhes">

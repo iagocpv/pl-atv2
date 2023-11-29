@@ -13,6 +13,7 @@ export default class ListaCliente extends Component<props>{
         let tema = this.props.tema
         return (
             <div className="container-fluid">
+                <h3 className="list-title">Clientes</h3>
                 <div className="list-group">
                     {this.clientes.map(c => {
                         return (
