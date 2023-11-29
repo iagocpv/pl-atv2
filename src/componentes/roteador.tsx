@@ -3,6 +3,8 @@ import BarraNavegacao from "./barraNavegacao";
 import ListaCliente from "./cliente/listaClientes";
 import FormularioCadastroCliente from "./cliente/formularioCadastroCliente";
 import ListaPet from "./pet/listaPet";
+import ListaProdutos from "./produto/listaProdutos";
+import ListaServicos from "./servico/listaServicos";
 
 type state = {
     tela: string
@@ -41,6 +43,20 @@ export default class Roteador extends Component<{}, state>{
                     <ListaPet tema="#e3f2fd"></ListaPet>
                 </>
             )
+        } else if (this.state.tela === 'Produtos') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ListaProdutos tema="#e3f2fd"></ListaProdutos>
+                </>
+            )
+        }  else if (this.state.tela === 'Serviços') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ListaServicos tema="#e3f2fd"></ListaServicos>
+                </>
+            )        
         } else {
             return (
                 <>
