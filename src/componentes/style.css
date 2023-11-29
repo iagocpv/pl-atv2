@@ -56,8 +56,30 @@
 .seletor-secao div {
   cursor: pointer;
 }
+
 .list-title {
   margin: 1em;
   text-align: center;
+}
+.cadastro-title {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.opcoes-cadastro {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5%;
+  gap: 2em;
+}
+
+.opcoes-cadastro button {
+  flex: 1 1 25em; 
+  padding: 1em;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  background-color: #e3f2fd;
+  max-width: 25em;
 }
  

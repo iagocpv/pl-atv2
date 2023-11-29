@@ -5,6 +5,10 @@ import FormularioCadastroCliente from "./cliente/formularioCadastroCliente";
 import ListaPet from "./pet/listaPet";
 import ListaProdutos from "./produto/listaProdutos";
 import ListaServicos from "./servico/listaServicos";
+import Cadastro from "./cadastro";
+import FormularioCadastroPet from "./pet/formularioCadastroPet";
+import FormularioCadastroProduto from "./produto/formularioCadastroProduto";
+import FormularioCadastroServico from "./servico/formularioCadastroServico";
 
 type state = {
     tela: string
@@ -56,12 +60,40 @@ export default class Roteador extends Component<{}, state>{
                     {barraNavegacao}
                     <ListaServicos tema="#e3f2fd"></ListaServicos>
                 </>
-            )        
-        } else {
+            )      
+        }  else if (this.state.tela === 'CadastroCliente') {
             return (
                 <>
                     {barraNavegacao}
-                    <FormularioCadastroCliente tema="#e3f2fd" />
+                    <FormularioCadastroCliente tema="#e3f2fd"></FormularioCadastroCliente>
+                </>
+            ) 
+        }  else if (this.state.tela === 'CadastroPet') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <FormularioCadastroPet tema="#e3f2fd"></FormularioCadastroPet>
+                </>
+            ) 
+        }  else if (this.state.tela === 'CadastroProduto') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <FormularioCadastroProduto tema="#e3f2fd"></FormularioCadastroProduto>
+                </>
+            ) 
+        }  else if (this.state.tela === 'CadastroServiço') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <FormularioCadastroServico tema="#e3f2fd"></FormularioCadastroServico>
+                </>
+            ) 
+         } else {
+            return (
+                <>
+                    {barraNavegacao}
+                    <Cadastro seletorView={this.selecionarView}/>
                 </>
             )
         }
