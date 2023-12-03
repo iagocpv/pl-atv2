@@ -9,6 +9,9 @@ import Cadastro from "./cadastro";
 import FormularioCadastroPet from "./pet/formularioCadastroPet";
 import FormularioCadastroProduto from "./produto/formularioCadastroProduto";
 import FormularioCadastroServico from "./servico/formularioCadastroServico";
+import Compra from "./compra";
+import CompraProduto from "./produto/compraProduto";
+import CompraServico from "./servico/compraServico";
 
 type state = {
     tela: string
@@ -89,11 +92,32 @@ export default class Roteador extends Component<{}, state>{
                     <FormularioCadastroServico tema="#e3f2fd"></FormularioCadastroServico>
                 </>
             ) 
-         } else {
+         } else if (this.state.tela === 'Cadastros') {
             return (
                 <>
                     {barraNavegacao}
                     <Cadastro seletorView={this.selecionarView}/>
+                </>
+            )
+        } else if (this.state.tela === 'Compras') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <Compra seletorView={this.selecionarView}/>
+                </>
+            )
+        } else if (this.state.tela === 'CompraProduto') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <CompraProduto tema="#e3f2fd"/>
+                </>
+            )
+        } else if (this.state.tela === 'CompraServico') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <CompraServico tema="#e3f2fd"/>
                 </>
             )
         }
